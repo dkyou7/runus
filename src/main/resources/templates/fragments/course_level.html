@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <th:block th:fragment="course_level(level)">
+        <!--        Beginners,Intermediate,Advanced-->
+        <th:block th:if="${#strings.toString(level)} == 'Beginners'">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                <rect x="7" y="5" width="2" height="9" rx="1" fill="#DBD8E9"></rect>
+                <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9"></rect>
+            </svg>
+            <span class="align-middle" th:text="${#strings.toString(level)}">Beginners</span>
+        </th:block>
+        <th:block th:if="${#strings.toString(level)} == 'Intermediate'">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9"></rect>
+            </svg>
+            <span class="align-middle" th:text="${#strings.toString(level)}">Intermediate</span>
+        </th:block>
+        <th:block th:if="${#strings.toString(level)} == 'Advanced'">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
+                <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
+                <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
+            </svg>
+            <span class="align-middle" th:text="${#strings.toString(level)}">Advanced</span>
+        </th:block>
+    </th:block>
+</body>
+</html>

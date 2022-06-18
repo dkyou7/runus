@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <th:block th:fragment="course_status(status)">
+        <td class="border-top-0">
+            <th:block th:if="${#strings.toString(status)} == 'LIVE'">
+                <span class="badge bg-success">Live</span>
+            </th:block>
+            <th:block th:if="${#strings.toString(status)} == 'DRAFT'">
+                <span class="badge bg-info">Draft</span>
+            </th:block>
+            <div th:if="${#strings.toString(status)} == 'PENDING'">
+                <span class="badge bg-warning">Pending</span>
+            </div>
+            <th:block th:if="${#strings.toString(status)} == 'DELETE'">
+                <span class="badge bg-danger">Deleted</span>
+            </th:block>
+        </td>
+    </th:block>
+    <th:block th:fragment="course_status_dot(status)">
+        <th:block th:if="${#strings.toString(status)} == 'LIVE'">
+            <span class="badge-dot bg-success me-1 d-inline-block align-middle"></span>Live
+        </th:block>
+        <th:block th:if="${#strings.toString(status)} == 'DRAFT'">
+            <span class="badge-dot bg-info me-1 d-inline-block align-middle"></span>Draft
+        </th:block>
+        <th:block th:if="${#strings.toString(status)} == 'PENDING'">
+            <span class="badge-dot bg-warning me-1 d-inline-block align-middle"></span>Pending
+        </th:block>
+        <th:block th:if="${#strings.toString(status)} == 'DELETE'">
+            <span class="badge-dot bg-danger me-1 d-inline-block align-middle"></span>Delete
+        </th:block>
+    </th:block>
+</body>
+</html>

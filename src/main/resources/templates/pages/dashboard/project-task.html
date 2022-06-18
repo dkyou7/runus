@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head.html")
+    <title>Project Task | Geeks - Academy Admin Template</title>
+  </head>
+  <body>
+    <!-- Wrapper -->
+    <div id="db-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', {
+      "page_group_second": "projectSingle",
+      "page_group": "project",
+      "page": "task"
+      })
+      <!-- Page Content -->
+      <div id="page-content">
+        @@include('../../partials/dashboard-header.html')
+        <!-- Container fluid -->
+        <div class="container-fluid p-4">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12 mb-2">
+              <!-- Page header -->
+              <div class="d-lg-flex
+                align-items-center justify-content-between">
+                <div class="mb-2 mb-lg-0">
+                  <h1 class="mb-0 h2 fw-bold">Geeks
+                    UI - Design & Development
+                  </h1>
+                </div>
+                <div class="d-flex align-items-center">
+                  <!-- avatar group -->
+                  <div class="avatar-group">
+                    <span class="avatar avatar-md">
+                      <!-- avatar  -->
+                      <img alt="avatar"
+                        src="../../assets/images/avatar/avatar-1.jpg"
+                        class="rounded-circle
+                        imgtooltip" data-template="one">
+                      <span id="one" class="d-none">
+                        <small class="mb-0 h6">Paul Haney</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <img alt="avatar"
+                        src="../../assets/images/avatar/avatar-2.jpg"
+                        class="rounded-circle
+                        imgtooltip" data-template="two">
+                      <span id="two" class="d-none">
+                        <small class="mb-0 h6">Gali Linear</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <img alt="avatar"
+                        src="../../assets/images/avatar/avatar-3.jpg"
+                        class="rounded-circle
+                        imgtooltip"
+                        data-template="three">
+                      <span id="three" class="d-none">
+                        <small class="mb-0 h6">Mary Holler</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <img alt="avatar"
+                        src="../../assets/images/avatar/avatar-4.jpg"
+                        class="rounded-circle
+                        imgtooltip"
+                        data-template="four">
+                      <span id="four" class="d-none">
+                        <small class="mb-0 h6">Lio Nordal</small>
+                      </span>
+                    </span>
+                    <!-- avatar  -->
+                    <span class="avatar avatar-md">
+                      <span class="avatar-initials
+                        rounded-circle bg-light
+                        text-dark">5+</span>
+                    </span>
+                  </div>
+                  <!-- icon  -->
+                  <a href="#" class="btn btn-icon btn-white border border-2 rounded-circle btn-dashed ms-2">
+
+                    +
+
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row  -->
+          <div class="row">
+            <div class="col-12 mb-4">
+              <!-- nav  -->
+              <ul class="nav nav-lb-tab">
+                <li class="nav-item ms-0 me-3">
+                  <a class="nav-link "
+                    href="project-overview.html">Overview</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link active"  href="project-task.html">Task</a>
+                  </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-budget.html">Budget</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-files.html">Files</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-team.html">Team</a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a class="nav-link" href="project-summary.html">Summary</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card mb-4">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between
+                    align-items-center">
+                    <div>
+                      <h4 class="mb-0">Task Summary</h4>
+                    </div>
+                    <!-- dropdown  -->
+                    <div class="">
+                      <span class="dropdown dropstart">
+                        <a
+                          class="text-muted text-decoration-none"
+                          href="#"
+                          role="button"
+                          id="DropdownSeven"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span
+                          class="dropdown-menu"
+                          aria-labelledby="DropdownSeven">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another
+                            action</a>
+                          <a class="dropdown-item" href="#">Something
+                            else
+                            here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-primary mb-0
+                      fw-bold">50</h1>
+                    <p class="mb-0">Total Task
+                      Count</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card mb-4">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between
+                    align-items-center">
+                    <div>
+                      <h4 class="mb-0">In Progress</h4>
+                    </div>
+                    <div class="">
+                      <!-- dropdown  -->
+                      <span class="dropdown dropstart">
+                        <a
+                          class="text-muted text-decoration-none"
+                          href="#"
+                          role="button"
+                          id="DropdownEight"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span
+                          class="dropdown-menu"
+                          aria-labelledby="DropdownEight">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another
+                            action</a>
+                          <a class="dropdown-item" href="#">Something
+                            else
+                            here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-info mb-0
+                      fw-bold">12</h1>
+                    <p class="mb-0 "><span
+                        class="text-dark fw-semi-bold">6</span> In Progress</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card mb-4">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between
+                    align-items-center">
+                    <div>
+                      <h4 class="mb-0">Completed</h4>
+                    </div>
+                    <!-- dropdown  -->
+                    <div class="">
+                      <span class="dropdown dropstart">
+                        <a
+                          class="text-muted text-decoration-none"
+                          href="#"
+                          role="button"
+                          id="DropdownNine"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span
+                          class="dropdown-menu"
+                          aria-labelledby="DropdownNine">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another
+                            action</a>
+                          <a class="dropdown-item" href="#">Something
+                            else
+                            here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-success mb-0
+                      fw-bold">30</h1>
+                    <p class="mb-0"><span
+                        class="text-dark fw-semi-bold">8</span> Today Completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 col-12">
+              <!-- card  -->
+              <div class="card mb-4">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between
+                    align-items-center">
+                    <div>
+                      <h4 class="mb-0">Overdue </h4>
+                    </div>
+                    <!-- dropdown  -->
+                    <div class="">
+                      <span class="dropdown dropstart">
+                        <a
+                          class="text-muted text-decoration-none"
+                          href="#"
+                          role="button"
+                          id="DropdownTen"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span
+                          class="dropdown-menu"
+                          aria-labelledby="DropdownTen">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another
+                            action</a>
+                          <a class="dropdown-item" href="#">Something
+                            else
+                            here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- text center  -->
+                  <div class="text-center my-4">
+                    <h1 class="display-3 text-danger mb-0
+                      fw-bold">8</h1>
+                    <p class="mb-0 "><span
+                        class="text-dark fw-semi-bold">4</span> Yesterday</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row  -->
+          <div class="row">
+            <div class="col-xl-8 col-md-12 col-12 mb-4">
+              <!-- card  -->
+              <div class="card">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h4 class="mb-0">Task Summary</h4>
+
+                    </div>
+                    <!-- dropdown  -->
+                    <div class="">
+                      <span class="dropdown dropstart">
+                        <a
+                          class="text-muted text-decoration-none"
+                          href="#"
+                          role="button"
+                          id="DropdownEleven"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span
+                          class="dropdown-menu"
+                          aria-labelledby="DropdownEleven">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another
+                            action</a>
+                          <a class="dropdown-item" href="#">Something
+                            else
+                            here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <p class="mt-4 mb-0">New vs. Closed</p>
+                  <!-- chart  -->
+                  <div id="taskSummary"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-12 col-12 mb-4">
+              <!-- card  -->
+              <div class="card h-100">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div class="mb-4">
+                      <h4 class="mb-0 ">Task Completion Status</h4>
+                    </div>
+                    <div class="">
+                      <!-- dropdown  -->
+                      <span class="dropdown dropstart">
+                        <a
+                          class="text-muted text-decoration-none"
+                          href="#"
+                          role="button"
+                          id="DropdownTwelve"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span
+                          class="dropdown-menu"
+                          aria-labelledby="DropdownTwelve">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another
+                            action</a>
+                          <a class="dropdown-item" href="#">Something
+                            else
+                            here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- chart  -->
+                  <div id="taskStatus" class="d-flex
+                    justify-content-center"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4 col-12 mb-4 mb-xl-0">
+              <!-- card  -->
+              <div class="card h-100">
+                <!-- card body  -->
+                <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h4 class="mb-0">Task by Sections</h4>
+                    </div>
+                    <div class="">
+                      <!-- dropdown  -->
+                      <span class="dropdown dropstart">
+                        <a
+                          class="text-muted text-decoration-none"
+                          href="#"
+                          role="button"
+                          id="DropdownThirteen"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <span
+                          class="dropdown-menu"
+                          aria-labelledby="DropdownThirteen">
+                          <span class="dropdown-header">Settings</span>
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another
+                            action</a>
+                          <a class="dropdown-item" href="#">Something
+                            else
+                            here</a>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- chart  -->
+                  <div id="taskSectionchart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-8 col-12 mb-4 mb-xl-0">
+              <!-- card  -->
+              <div class="card h-100">
+                <!-- card header  -->
+                <div class="card-header ">
+                  <h4 class="mb-0">Upcoming task by Assignee</h4>
+                </div>
+                <!-- table  -->
+                <div class="table-responsive">
+                  <table class="table text-nowrap mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th class="">Tasks</th>
+                        <th class="">End
+                          Date</th>
+                        <th class="">Status</th>
+                        <th class="">Progress</th>
+                        <th class="">Assignee</th>
+                        <th class=""></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="align-middle">Design Wireframes</td>
+                        <td class="align-middle">Set end date</td>
+                        <td class="align-middle"><span class="badge
+                            bg-light-primary text-primary">In
+                            Review</span></td>
+                        <td class="align-middle"><div
+                            class="taskWireframeChart"></div></td>
+                        <td class="align-middle"><img
+                            src="../../assets/images/avatar/avatar-1.jpg"
+                            alt="" class="avatar avatar-xs
+                            rounded-circle"></td>
+                        <td class="align-middle"> <span
+                            class="dropdown dropstart">
+                            <a
+                              class="text-muted
+                              text-decoration-none"
+                              href="#"
+                              role="button"
+                              id="DropdownFourteen"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span
+                              class="dropdown-menu"
+                              aria-labelledby="DropdownFourteen">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another
+                                action</a>
+                              <a class="dropdown-item" href="#">Something
+                                else
+                                here</a>
+                            </span>
+                          </span></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle">Prototype design</td>
+                        <td class="align-middle">Aug 15, 2021</td>
+                        <td class="align-middle"><span class="badge
+                            bg-light-info text-info">In
+                            Progress</span></td>
+                        <td class="align-middle"><div
+                            class="taskPrototypeChart"></div></td>
+                        <td class="align-middle"><img
+                            src="../../assets/images/avatar/avatar-2.jpg"
+                            alt="" class="avatar avatar-xs
+                            rounded-circle"></td>
+                        <td class="align-middle"> <span
+                            class="dropdown dropstart">
+                            <a
+                              class="text-muted
+                              text-decoration-none"
+                              href="#"
+                              role="button"
+                              id="DropdownFifteen"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <span
+                              class="dropdown-menu"
+                              aria-labelledby="DropdownFifteen">
+                              <span class="dropdown-header">Settings</span>
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another
+                                action</a>
+                              <a class="dropdown-item" href="#">Something
+                                else
+                                here</a>
+                            </span>
+                          </span></td>
+                      </tr>
+                      <tr>
+                        <td class="align-middle">Content Writing</td>
+                        <td class="align-middle">Aug 16, 2021</td>
+                        <td class="align-middle"><span class="badge
+                            bg-light-danger text-danger">Cancel</span></td>
+                        <td class="align-middle"><div
+                            class="taskContentChart"></div>
+                          <td class="align-middle"><img
+                              src="../../assets/images/avatar/avatar-3.jpg"
+                              alt="" class="avatar avatar-xs
+                              rounded-circle"></td>
+                          <td class="align-middle"> <span
+                              class="dropdown dropstart">
+                              <a
+                                class="text-muted
+                                text-decoration-none"
+                                href="#"
+                                role="button"
+                                id="DropdownSixteen"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <span
+                                class="dropdown-menu"
+                                aria-labelledby="DropdownSixteen">
+                                <span class="dropdown-header">Settings</span>
+                                <a class="dropdown-item"
+                                  href="#">Action</a>
+                                <a class="dropdown-item"
+                                  href="#">Another action</a>
+                                <a class="dropdown-item"
+                                  href="#">Something else
+                                  here</a>
+                              </span>
+                            </span></td>
+                        </tr>
+                        <tr>
+                          <td class="align-middle">Figma to
+                            Bootstrap Conversion </td>
+                          <td class="align-middle">Aug 18, 2021</td>
+                          <td class="align-middle"><span
+                              class="badge bg-light-primary
+                              text-primary">In Review</span></td>
+                          <td class="align-middle"><div
+                              class="taskFigmaChart"></div></td>
+                          <td class="align-middle"><img
+                              src="../../assets/images/avatar/avatar-5.jpg"
+                              alt="" class="avatar avatar-xs
+                              rounded-circle"></td>
+                          <td class="align-middle"> <span
+                              class="dropdown dropstart">
+                              <a
+                                class="text-muted
+                                text-decoration-none"
+                                href="#"
+                                role="button"
+                                id="DropdownSeventeen"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <span
+                                class="dropdown-menu"
+                                aria-labelledby="DropdownSeventeen">
+                                <span class="dropdown-header">Settings</span>
+                                <a class="dropdown-item"
+                                  href="#">Action</a>
+                                <a class="dropdown-item"
+                                  href="#">Another action</a>
+                                <a class="dropdown-item"
+                                  href="#">Something else
+                                  here</a>
+                              </span>
+                            </span></td>
+                        </tr>
+                        <tr>
+                          <td class="align-middle">User Interface
+                            Design </td>
+                          <td class="align-middle">Aug 18, 2021</td>
+                          <td class="align-middle"><span
+                              class="badge bg-light-primary
+                              text-primary">In Review</span></td>
+                          <td class="align-middle"><div
+                              class="taskInterfaceChart"></div></td>
+                          <td class="align-middle"><img
+                              src="../../assets/images/avatar/avatar-6.jpg"
+                              alt="" class="avatar avatar-xs
+                              rounded-circle"></td>
+                          <td class="align-middle"> <span
+                              class="dropdown dropstart">
+                              <a
+                                class="text-muted
+                                text-decoration-none"
+                                href="#"
+                                role="button"
+                                id="DropdownEighteen"
+                                data-bs-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <span
+                                class="dropdown-menu"
+                                aria-labelledby="DropdownEighteen">
+                                <span class="dropdown-header">Settings</span>
+                                <a class="dropdown-item"
+                                  href="#">Action</a>
+                                <a class="dropdown-item"
+                                  href="#">Another action</a>
+                                <a class="dropdown-item"
+                                  href="#">Something else
+                                  here</a>
+                              </span>
+                            </span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Scripts -->
+      @@include("../../partials/scripts.html")
+    </body>
+  </html>

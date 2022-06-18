@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <th:block th:fragment="instructor_header_fragment">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+            <!-- Bg
+            <div class="pt-16 rounded-top-md"
+                 th:style="'background: url('+@{~/assets/images/background/profile-bg.jpg}+') no-repeat; background-size: cover;'"></div>-->
+            <div class="pt-16 rounded-top-md"
+                 th:style="|background: url('@{~/assets/images/background/profile-bg.jpg}') no-repeat; background-size: cover;|"></div>
+            <div
+                    class="d-flex align-items-end justify-content-between bg-white px-4 pt-2 pb-4 rounded-none rounded-bottom-md shadow-sm">
+                <div class="d-flex align-items-center">
+                    <div class="me-2 position-relative d-flex justify-content-end align-items-end mt-n5">
+                        <svg th:if="${#strings.isEmpty(account.profileImage)}" class="avatar-xl rounded-circle"  th:data-jdenticon-value="${#authentication.name}"></svg>
+                        <img th:unless="${#strings.isEmpty(account.profileImage)}" src="../assets/images/avatar/avatar-1.jpg" class="avatar-xl rounded-circle border border-4 border-white position-relative"
+                             alt="" />
+                        <a href="#" class="position-absolute top-0 end-0" data-bs-toggle="tooltip" data-placement="top"
+                           title="Verified">
+                            <img src="../assets/images/svg/checked-mark.svg" alt="" height="30" width="30" />
+                        </a>
+                    </div>
+                    <div class="lh-1">
+                        <h2 class="mb-0" th:text="${account.nickname}">Jenny Wilson</h2>
+                        <p class="mb-0 d-block" th:text="${account.email}">@Jennywilson</p>
+                    </div>
+                </div>
+                <div>
+                    <a th:href="@{/pages/add-course}" class="btn btn-primary btn-sm d-none d-md-block">강의 만들기</a>
+                </div>
+            </div>
+        </div>
+    </th:block>
+
+    <th:block th:fragment="instructor_sidebar_fragment(active_title)">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm mb-4 mb-lg-0 sidenav">
+            <!-- Menu -->
+            <a class="d-xl-none d-lg-none d-md-none text-inherit fw-bold" href="#">Menu</a>
+            <!-- Button -->
+            <button class="navbar-toggler d-md-none icon-shape icon-sm rounded bg-primary text-light" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#sidenav" aria-controls="sidenav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="fe fe-menu"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav">
+                <div class="navbar-nav flex-column">
+                    <span class="navbar-header">Dashboard</span>
+                    <!-- Navbar header -->
+                    <ul class="list-unstyled ms-n2 mb-4">
+                        <!-- Nav item -->
+                        <li class="nav-item" th:classappend="${active_title == 'dashboard-instructor'} ? 'active'">
+                            <a class="nav-link" th:href="@{/pages/dashboard-instructor}">
+                                <i class="fe fe-home nav-icon"></i>My Dashboard</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item" th:classappend="${active_title == 'instructor-courses'} ? 'active'">
+                            <a class="nav-link" th:href="@{/pages/instructor-courses}">
+                                <i class="fe fe-book nav-icon"></i>My Courses</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item" th:classappend="${active_title == 'instructor-reviews'} ? 'active'">
+                            <a class="nav-link" th:href="@{/pages/instructor-reviews}">
+                                <i class="fe fe-star nav-icon"></i>Reviews</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item" th:classappend="${active_title == 'instructor-earning'} ? 'active'">
+                            <a class="nav-link" th:href="@{/pages/instructor-earning}">
+                                <i class="fe fe-pie-chart nav-icon"></i>Earnings</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item" th:classappend="${active_title == 'instructor-order'} ? 'active'">
+                            <a class="nav-link" th:href="@{/pages/instructor-order}">
+                                <i class="fe fe-shopping-bag nav-icon"></i>Orders</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item" th:classappend="${active_title == 'instructor-students'} ? 'active'">
+                            <a class="nav-link" th:href="@{/pages/instructor-students}">
+                                <i class="fe fe-users nav-icon"></i>Students</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item" th:classappend="${active_title == 'instructor-payouts'} ? 'active'">
+                            <a class="nav-link" th:href="@{/pages/instructor-payouts}">
+                                <i class="fe fe-dollar-sign nav-icon"></i>Payouts</a>
+                        </li>
+                    </ul>
+                    <!-- Navbar header -->
+                    <span class="navbar-header">Account Settings</span>
+                    <ul class="list-unstyled ms-n2 mb-0">
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/pages/profile-edit}"><i class="fe fe-settings nav-icon"></i>Edit Profile</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="security.html"><i class="fe fe-user nav-icon"></i>Security</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="social-profile.html"><i class="fe fe-refresh-cw nav-icon"></i>Social
+                                Profiles</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/pages/notifications}"><i class="fe fe-bell nav-icon"></i>Notifications</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/pages/profile-privacy}"><i class="fe fe-lock nav-icon"></i>Profile
+                                Privacy</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="delete-profile.html"><i class="fe fe-trash nav-icon"></i>Delete
+                                Profile</a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/pages/sign-out}"><i class="fe fe-power nav-icon"></i>로그아웃</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </th:block>
+</body>
+</html>
